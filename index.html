@@ -160,33 +160,38 @@ font-size:14px;
 }
 
 @keyframes scroll{
-
-0%{
-transform:translateX(0);
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
 }
 
-100%{
-transform:translateX(-50%);
+/* MAP */
+
+.map{
+width:100%;
+height:320px;
+margin-top:60px;
 }
 
-}
-
-/* CONTACT */
-
-.contact p{
-margin:10px 0;
+.map iframe{
+width:100%;
+height:100%;
+border:0;
 }
 
 /* FOOTER */
 
 footer{
 background:black;
+padding:40px 20px;
 text-align:center;
-padding:25px;
-margin-top:40px;
+line-height:1.8;
 }
 
-/* WHATSAPP BUTTON */
+footer h3{
+margin-bottom:10px;
+}
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -236,7 +241,6 @@ grid-template-columns:1fr;
 <body>
 
 <nav>
-
 <div class="logo">A R Unisex Salon</div>
 
 <div class="navlinks">
@@ -244,11 +248,9 @@ grid-template-columns:1fr;
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
-
 </nav>
 
 <section class="hero">
-
 <div>
 
 <h1>A R Unisex Salon</h1>
@@ -257,12 +259,11 @@ grid-template-columns:1fr;
 ⭐ 4.9 Rating (31 Reviews)
 </div>
 
-<a href="tel:7048946935" class="callbtn">
+<a href="tel:9999999999" class="callbtn">
 Call Now
 </a>
 
 </div>
-
 </section>
 
 <!-- SERVICES -->
@@ -344,7 +345,6 @@ Call Now
 <h2>Customer Reviews</h2>
 
 <div class="carousel">
-
 <div class="carousel-track">
 
 <div class="review-card">
@@ -383,7 +383,7 @@ Call Now
 <b>— Pankaj Panwar</b>
 </div>
 
-<!-- duplicates for infinite loop -->
+<!-- duplicates -->
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -398,24 +398,34 @@ Call Now
 </div>
 
 </div>
-
 </div>
 
 </section>
 
-<!-- CONTACT -->
+<!-- MAP -->
 
-<section id="contact" class="section contact">
+<div class="map">
+<iframe
+src="https://maps.google.com/maps?q=Panama%20Park%20Society%20Lohegaon%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+</div>
 
-<h2>Visit Us</h2>
+<!-- FOOTER -->
+
+<footer id="contact">
+
+<h3>Visit Us</h3>
 
 <p>📍 Panama Park Society, Lohegaon, Pune</p>
-<p>📞 070489 46935</p>
 
-</section>
+<p>📞 +91 98765 43210</p>
 
-<footer>
+<p>✉️ contact@salonexample.com</p>
+
+<br>
+
 <p>© 2026 A R Unisex Salon</p>
+
 </footer>
 
 <a href="https://wa.me/917048946935" class="whatsapp">💬 WhatsApp</a>
