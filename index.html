@@ -2,11 +2,15 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>A R Unisex Salon</title>
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
@@ -18,6 +22,7 @@ font-family:Arial, Helvetica, sans-serif;
 body{
 background:#111;
 color:white;
+line-height:1.6;
 }
 
 /* NAVBAR */
@@ -28,7 +33,7 @@ justify-content:space-between;
 align-items:center;
 padding:18px 60px;
 background:rgba(0,0,0,0.8);
-border-bottom:1px solid rgba(255,255,255,0.1);
+border-bottom:1px solid rgba(255,255,255,0.08);
 position:sticky;
 top:0;
 z-index:1000;
@@ -48,21 +53,31 @@ gap:25px;
 color:white;
 text-decoration:none;
 font-size:15px;
+transition:0.2s;
+}
+
+.navlinks a:hover{
+color:#f5c542;
 }
 
 /* HERO */
 
 .hero{
+
 height:80vh;
+
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
 url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1920&auto=format&fit=crop");
+
 background-size:cover;
 background-position:center;
+
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+
 }
 
 .hero h1{
@@ -71,16 +86,17 @@ margin-bottom:10px;
 }
 
 .rating{
-margin-bottom:20px;
 color:#f5c542;
+margin-bottom:20px;
+font-size:18px;
 }
 
 .callbtn{
 padding:14px 28px;
 background:#f5c542;
 color:black;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 border-radius:6px;
 }
 
@@ -110,6 +126,7 @@ background:#1c1c1c;
 padding:25px;
 border-radius:12px;
 text-align:left;
+min-height:250px;
 }
 
 .service-card h3{
@@ -117,8 +134,8 @@ margin-bottom:10px;
 }
 
 .service-card p{
-margin:6px 0;
 font-size:14px;
+margin:6px 0;
 }
 
 /* REVIEWS */
@@ -126,22 +143,28 @@ font-size:14px;
 .carousel{
 overflow:hidden;
 width:100%;
+margin-top:30px;
 }
 
 .carousel-track{
 display:flex;
 gap:16px;
 width:max-content;
-animation:scroll 35s linear infinite;
+animation:scroll 45s linear infinite;
 }
 
 .review-card{
+
 width:200px;
 min-width:200px;
+
 background:#1c1c1c;
 padding:16px;
+
 border-radius:10px;
+
 text-align:left;
+
 }
 
 .review-card p{
@@ -159,9 +182,18 @@ color:#f5c542;
 font-size:14px;
 }
 
+/* PERFECT LOOP */
+
 @keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
 }
 
 /* MAP */
@@ -181,30 +213,39 @@ border:0;
 /* FOOTER */
 
 footer{
+
 background:black;
 padding:40px 20px;
 text-align:center;
 line-height:1.8;
+
 }
 
 footer h3{
 margin-bottom:10px;
 }
 
-/* WHATSAPP */
+/* WHATSAPP BUTTON */
 
 .whatsapp{
+
 position:fixed;
 bottom:20px;
 right:20px;
+
 background:#25D366;
 color:white;
+
 padding:14px 18px;
+
 border-radius:30px;
 font-weight:bold;
 text-decoration:none;
+
 z-index:9999;
+
 box-shadow:0 4px 10px rgba(0,0,0,0.4);
+
 }
 
 /* MOBILE */
@@ -236,11 +277,15 @@ grid-template-columns:1fr;
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
+
 <div class="logo">A R Unisex Salon</div>
 
 <div class="navlinks">
@@ -248,9 +293,13 @@ grid-template-columns:1fr;
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
+
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
+
 <div>
 
 <h1>A R Unisex Salon</h1>
@@ -264,6 +313,7 @@ Call Now
 </a>
 
 </div>
+
 </section>
 
 <!-- SERVICES -->
@@ -345,7 +395,20 @@ Call Now
 <h2>Customer Reviews</h2>
 
 <div class="carousel">
+
 <div class="carousel-track">
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Very good experience with all services.</p>
+<b>— Saloni More</b>
+</div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Good quality service at great prices.</p>
+<b>— Pankaj Panwar</b>
+</div>
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -371,6 +434,8 @@ Call Now
 <b>— Dinesh Siddha</b>
 </div>
 
+<!-- DUPLICATES FOR LOOP -->
+
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
 <p>Very good experience with all services.</p>
@@ -382,8 +447,6 @@ Call Now
 <p>Good quality service at great prices.</p>
 <b>— Pankaj Panwar</b>
 </div>
-
-<!-- duplicates -->
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -397,7 +460,20 @@ Call Now
 <b>— Aadesh Bhandari</b>
 </div>
 
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Best experience for haircut and beard.</p>
+<b>— Subhan Usmin</b>
 </div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Friendly staff and professional artists.</p>
+<b>— Dinesh Siddha</b>
+</div>
+
+</div>
+
 </div>
 
 </section>
@@ -405,9 +481,11 @@ Call Now
 <!-- MAP -->
 
 <div class="map">
+
 <iframe
 src="https://maps.google.com/maps?q=Panama%20Park%20Society%20Lohegaon%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed">
 </iframe>
+
 </div>
 
 <!-- FOOTER -->
@@ -428,7 +506,9 @@ src="https://maps.google.com/maps?q=Panama%20Park%20Society%20Lohegaon%20Pune&t=
 
 </footer>
 
-<a href="https://wa.me/917048946935" class="whatsapp">💬 WhatsApp</a>
+<a href="https://wa.me/917048946935" class="whatsapp">
+💬 WhatsApp
+</a>
 
 </body>
 </html>
