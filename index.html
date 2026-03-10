@@ -28,8 +28,10 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
-background:black;
+padding:18px 60px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 position:sticky;
 top:0;
 z-index:1000;
@@ -44,6 +46,7 @@ font-weight:bold;
 color:white;
 text-decoration:none;
 margin-left:25px;
+font-size:15px;
 }
 
 /* HERO */
@@ -62,6 +65,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding:20px;
 }
 
 .hero h1{
@@ -85,7 +89,7 @@ text-decoration:none;
 border-radius:6px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 .section{
 padding:80px 60px;
@@ -101,19 +105,32 @@ font-size:32px;
 
 .services{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
+max-width:900px;
+margin:auto;
 }
 
 .service-card{
 background:#1c1c1c;
-padding:30px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
 transition:0.3s;
+text-align:left;
+min-height:260px;
 }
 
 .service-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
+}
+
+.service-card h3{
+margin-bottom:12px;
+}
+
+.service-card p{
+margin:6px 0;
+font-size:14px;
 }
 
 /* REVIEW CAROUSEL */
@@ -121,12 +138,14 @@ transform:translateY(-5px);
 .carousel{
 overflow:hidden;
 width:100%;
+margin-top:40px;
 }
 
 .carousel-track{
 display:flex;
-gap:25px;
-transition:transform 0.5s ease;
+gap:20px;
+width:max-content;
+animation:scrollReviews 40s linear infinite;
 }
 
 .review-card{
@@ -138,13 +157,33 @@ border-radius:12px;
 text-align:left;
 flex-shrink:0;
 }
+
 .review-card h3{
-margin-bottom:8px;
+margin-bottom:6px;
+}
+
+.review-card p{
+font-size:14px;
+line-height:1.5;
 }
 
 .stars{
 color:#f5c542;
 margin-bottom:10px;
+}
+
+/* INFINITE SCROLL */
+
+@keyframes scrollReviews{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
 }
 
 /* CONTACT */
@@ -190,15 +229,7 @@ box-shadow:0 4px 10px rgba(0,0,0,0.4);
 @media(max-width:768px){
 
 nav{
-padding:20px;
-}
-
-.services{
-grid-template-columns:1fr;
-}
-
-.review-card{
-min-width:100%;
+padding:18px 20px;
 }
 
 .hero h1{
@@ -207,6 +238,15 @@ font-size:32px;
 
 .section{
 padding:60px 20px;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+.review-card{
+min-width:85%;
+max-width:85%;
 }
 
 }
@@ -260,18 +300,39 @@ Call Now
 <div class="services">
 
 <div class="service-card">
-<h3>Haircut</h3>
-<p>Modern styles and professional cuts.</p>
+<h3>Haircuts</h3>
+<p>Classic Cut — ₹00</p>
+<p>Fade Cut — ₹00</p>
+<p>Skin Fade — ₹00</p>
+<p>Layer Cut — ₹00</p>
+<p>Buzz Cut — ₹00</p>
+<p>Kids Haircut — ₹00</p>
 </div>
 
 <div class="service-card">
 <h3>Beard Grooming</h3>
-<p>Clean shaping and beard styling.</p>
+<p>Beard Trim — ₹00</p>
+<p>Beard Styling — ₹00</p>
+<p>Clean Shave — ₹00</p>
+<p>Royal Shave — ₹00</p>
+<p>Beard Fade — ₹00</p>
 </div>
 
 <div class="service-card">
 <h3>Hair Treatments</h3>
-<p>Hair spa and scalp care services.</p>
+<p>Hair Spa — ₹00</p>
+<p>Keratin Treatment — ₹00</p>
+<p>Hair Smoothening — ₹00</p>
+<p>Hair Coloring — ₹00</p>
+<p>Scalp Treatment — ₹00</p>
+</div>
+
+<div class="service-card">
+<h3>Facial & Skin</h3>
+<p>Face Cleanup — ₹00</p>
+<p>Gold Facial — ₹00</p>
+<p>Detan Treatment — ₹00</p>
+<p>Face Massage — ₹00</p>
 </div>
 
 </div>
@@ -297,7 +358,7 @@ Call Now
 <div class="review-card">
 <h3>Aadesh Bhandari</h3>
 <div class="stars">⭐⭐⭐⭐⭐</div>
-<p>The only salon I trust with my hair. Easy appointments, welcoming staff and talented employees.</p>
+<p>The only salon I trust with my hair. Easy appointments and talented employees.</p>
 </div>
 
 <div class="review-card">
@@ -309,7 +370,45 @@ Call Now
 <div class="review-card">
 <h3>Dinesh Siddha</h3>
 <div class="stars">⭐⭐⭐⭐⭐</div>
-<p>Best place for haircut and hair treatments. Friendly staff and professional artist.</p>
+<p>Best place for haircut and hair treatments. Friendly staff.</p>
+</div>
+
+<div class="review-card">
+<h3>Saloni More</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Very good experience. Works very well with all services.</p>
+</div>
+
+<div class="review-card">
+<h3>Pankaj Panwar</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Awesome service with good price and quality. Keep it up.</p>
+</div>
+
+<!-- duplicated for infinite loop -->
+
+<div class="review-card">
+<h3>Sunil Kulkarni</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Super service.. Burahan gave me a customised experience. Best haircut for my face shape.</p>
+</div>
+
+<div class="review-card">
+<h3>Aadesh Bhandari</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>The only salon I trust with my hair. Easy appointments and talented employees.</p>
+</div>
+
+<div class="review-card">
+<h3>Subhan Usmin</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Best service for haircut and beard. Amazing experience today.</p>
+</div>
+
+<div class="review-card">
+<h3>Dinesh Siddha</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Best place for haircut and hair treatments. Friendly staff.</p>
 </div>
 
 <div class="review-card">
@@ -337,7 +436,7 @@ Call Now
 <h2>Visit Us</h2>
 
 <p>
-📍 A/4, Panama Park Society,
+📍 A/4, Panama Park Society,  
 Nimbalkar Nagar, Lohegaon, Pune 411047
 </p>
 
@@ -362,45 +461,13 @@ style="border:0;">
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-
 <p>© 2026 A R Unisex Salon</p>
-
 </footer>
-
-<!-- WHATSAPP -->
 
 <a href="https://wa.me/917048946935" class="whatsapp">
 💬 WhatsApp
 </a>
-
-<!-- REVIEW CAROUSEL SCRIPT -->
-
-<script>
-
-let track=document.querySelector(".carousel-track");
-let index=0;
-
-function slideReviews(){
-
-let cards=document.querySelectorAll(".review-card");
-let cardWidth=cards[0].offsetWidth+25;
-
-index++;
-
-if(index>cards.length-3){
-index=0;
-}
-
-track.style.transform="translateX(-"+(cardWidth*index)+"px)";
-
-}
-
-setInterval(slideReviews,4000);
-
-</script>
 
 </body>
 
