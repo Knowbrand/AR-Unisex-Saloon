@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +31,9 @@ justify-content:space-between;
 align-items:center;
 padding:20px 60px;
 background:black;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
@@ -41,6 +45,7 @@ font-weight:bold;
 color:white;
 text-decoration:none;
 margin-left:25px;
+font-size:15px;
 }
 
 /* HERO */
@@ -59,6 +64,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding:20px;
 }
 
 .hero h1{
@@ -67,19 +73,24 @@ margin-bottom:10px;
 }
 
 .rating{
-margin-bottom:20px;
+margin-bottom:25px;
 color:#f5c542;
+font-size:18px;
 }
 
-.hero button{
-padding:12px 25px;
-border:none;
+/* CALL BUTTON */
+
+.callbtn{
+display:inline-block;
+padding:14px 30px;
 background:#f5c542;
+color:black;
 font-weight:bold;
-cursor:pointer;
+text-decoration:none;
+border-radius:6px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
 padding:80px 60px;
@@ -88,6 +99,7 @@ text-align:center;
 
 .section h2{
 margin-bottom:40px;
+font-size:32px;
 }
 
 /* SERVICES */
@@ -102,6 +114,11 @@ gap:25px;
 background:#1c1c1c;
 padding:30px;
 border-radius:10px;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
 }
 
 /* REVIEWS */
@@ -124,6 +141,14 @@ border-radius:10px;
 margin:10px 0;
 }
 
+/* MAP */
+
+.map{
+margin-top:30px;
+border-radius:10px;
+overflow:hidden;
+}
+
 /* FOOTER */
 
 footer{
@@ -132,6 +157,23 @@ text-align:center;
 padding:25px;
 margin-top:40px;
 }
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -151,6 +193,10 @@ grid-template-columns:1fr;
 font-size:32px;
 }
 
+.section{
+padding:60px 20px;
+}
+
 }
 
 </style>
@@ -158,6 +204,8 @@ font-size:32px;
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <nav>
 
@@ -171,6 +219,8 @@ font-size:32px;
 
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div>
@@ -181,13 +231,15 @@ font-size:32px;
 ⭐ 4.9 Rating (31 Reviews)
 </div>
 
-<button onclick="window.open('tel:07048946935')">
+<a href="tel:7048946935" class="callbtn">
 Call Now
-</button>
+</a>
 
 </div>
 
 </section>
+
+<!-- SERVICES -->
 
 <section id="services" class="section">
 
@@ -214,6 +266,8 @@ Call Now
 
 </section>
 
+<!-- REVIEWS -->
+
 <section class="section">
 
 <h2>Customer Reviews</h2>
@@ -222,14 +276,14 @@ Call Now
 
 <div class="review-card">
 <p>
-"Super service.. Burahan gave me a customised experience. 
+"Super service.. Burahan gave me a customised experience.
 Best haircut for my face shape."
 </p>
 </div>
 
 <div class="review-card">
 <p>
-"Easy appointments, welcoming staff and talented employees. 
+"Easy appointments, welcoming staff and talented employees.
 Highly recommend this salon."
 </p>
 </div>
@@ -238,12 +292,14 @@ Highly recommend this salon."
 
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact" class="section contact">
 
 <h2>Visit Us</h2>
 
 <p>
-📍 A/4, Panama Park Society,  
+📍 A/4, Panama Park Society,
 Nimbalkar Nagar, Lohegaon, Pune 411047
 </p>
 
@@ -255,7 +311,20 @@ Nimbalkar Nagar, Lohegaon, Pune 411047
 🕒 Open until 11 PM
 </p>
 
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=Panama%20Park%20Society%20Lohegaon%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300"
+style="border:0;">
+</iframe>
+
+</div>
+
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -263,6 +332,13 @@ Nimbalkar Nagar, Lohegaon, Pune 411047
 
 </footer>
 
+<!-- WHATSAPP BUTTON -->
+
+<a href="https://wa.me/917048946935" class="whatsapp">
+💬 WhatsApp
+</a>
+
 </body>
 
 </html>
+```
