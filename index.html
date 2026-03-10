@@ -28,7 +28,7 @@ justify-content:space-between;
 align-items:center;
 padding:18px 60px;
 background:rgba(0,0,0,0.7);
-backdrop-filter:blur(8px);
+backdrop-filter:blur(6px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 position:sticky;
 top:0;
@@ -50,11 +50,14 @@ margin-left:25px;
 
 .hero{
 height:80vh;
+
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
 url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1920&auto=format&fit=crop");
+
 background-size:cover;
 background-position:center;
+
 display:flex;
 align-items:center;
 justify-content:center;
@@ -97,9 +100,9 @@ margin-bottom:40px;
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:25px;
-max-width:900px;
+max-width:1000px;
 margin:auto;
 }
 
@@ -108,11 +111,11 @@ background:#1c1c1c;
 padding:25px;
 border-radius:12px;
 text-align:left;
-min-height:260px;
+min-height:280px;
 }
 
 .service-card h3{
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 .service-card p{
@@ -120,7 +123,7 @@ margin:6px 0;
 font-size:14px;
 }
 
-/* REVIEW CAROUSEL */
+/* REVIEWS */
 
 .carousel{
 overflow:hidden;
@@ -136,11 +139,26 @@ animation:scrollReviews 40s linear infinite;
 }
 
 .review-card{
-min-width:260px;
-max-width:260px;
+width:240px;
+min-width:240px;
+max-width:240px;
+height:220px;
 background:#1c1c1c;
-padding:22px;
+padding:20px;
 border-radius:12px;
+display:flex;
+flex-direction:column;
+}
+
+.review-card p{
+font-size:14px;
+line-height:1.5;
+}
+
+.review-card b{
+margin-top:auto;
+font-size:13px;
+opacity:0.7;
 }
 
 .stars{
@@ -198,11 +216,8 @@ nav{padding:18px 20px;}
 
 .section{padding:60px 20px;}
 
-.services{grid-template-columns:1fr;}
-
-.review-card{
-min-width:85%;
-max-width:85%;
+.services{
+grid-template-columns:1fr;
 }
 
 }
@@ -213,9 +228,8 @@ max-width:85%;
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
+
 <div class="logo">A R Unisex Salon</div>
 
 <div class="navlinks">
@@ -223,9 +237,8 @@ max-width:85%;
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
-</nav>
 
-<!-- HERO -->
+</nav>
 
 <section class="hero">
 
@@ -245,13 +258,75 @@ Call Now
 
 </section>
 
-<!-- SERVICES (CMS CONTROLLED) -->
+<!-- SERVICES -->
 
 <section id="services" class="section">
 
 <h2>Our Services</h2>
 
-<div id="services-container" class="services"></div>
+<div class="services">
+
+<div class="service-card">
+<h3>Haircuts</h3>
+<p>Classic Cut — ₹00</p>
+<p>Fade Cut — ₹00</p>
+<p>Skin Fade — ₹00</p>
+<p>Layer Cut — ₹00</p>
+<p>Kids Haircut — ₹00</p>
+<p>Scissor Cut — ₹00</p>
+</div>
+
+<div class="service-card">
+<h3>Beard Grooming</h3>
+<p>Beard Trim — ₹00</p>
+<p>Beard Styling — ₹00</p>
+<p>Beard Fade — ₹00</p>
+<p>Hot Towel Shave — ₹00</p>
+<p>Razor Shave — ₹00</p>
+<p>Beard Coloring — ₹00</p>
+</div>
+
+<div class="service-card">
+<h3>Hair Treatments</h3>
+<p>Hair Spa — ₹00</p>
+<p>Keratin Treatment — ₹00</p>
+<p>Protein Treatment — ₹00</p>
+<p>Dandruff Treatment — ₹00</p>
+<p>Scalp Massage — ₹00</p>
+<p>Hair Fall Control — ₹00</p>
+</div>
+
+<div class="service-card">
+<h3>Face Care</h3>
+<p>Face Clean Up — ₹00</p>
+<p>Fruit Facial — ₹00</p>
+<p>Gold Facial — ₹00</p>
+<p>Detan Treatment — ₹00</p>
+<p>Face Massage — ₹00</p>
+<p>Blackhead Removal — ₹00</p>
+</div>
+
+<div class="service-card">
+<h3>Hair Styling</h3>
+<p>Hair Blow Dry — ₹00</p>
+<p>Hair Straightening — ₹00</p>
+<p>Hair Curling — ₹00</p>
+<p>Hair Iron — ₹00</p>
+<p>Party Styling — ₹00</p>
+<p>Volume Styling — ₹00</p>
+</div>
+
+<div class="service-card">
+<h3>Coloring</h3>
+<p>Hair Coloring — ₹00</p>
+<p>Beard Coloring — ₹00</p>
+<p>Highlights — ₹00</p>
+<p>Global Color — ₹00</p>
+<p>Root Touchup — ₹00</p>
+<p>Fashion Color — ₹00</p>
+</div>
+
+</div>
 
 </section>
 
@@ -268,43 +343,51 @@ Call Now
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
 <p>Super service.. Best haircut for my face shape.</p>
+<b>— Sunil Kulkarni</b>
 </div>
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
 <p>The only salon I trust with my hair.</p>
+<b>— Aadesh Bhandari</b>
 </div>
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
-<p>Best service for haircut and beard.</p>
+<p>Best experience for haircut and beard.</p>
+<b>— Subhan Usmin</b>
 </div>
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
 <p>Friendly staff and professional artists.</p>
+<b>— Dinesh Siddha</b>
 </div>
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
-<p>Great service with good pricing.</p>
+<p>Very good experience with all services.</p>
+<b>— Saloni More</b>
 </div>
 
-<!-- duplicated for infinite scroll -->
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Good quality service at great prices.</p>
+<b>— Pankaj Panwar</b>
+</div>
+
+<!-- duplicated for infinite loop -->
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
 <p>Super service.. Best haircut for my face shape.</p>
+<b>— Sunil Kulkarni</b>
 </div>
 
 <div class="review-card">
 <div class="stars">⭐⭐⭐⭐⭐</div>
 <p>The only salon I trust with my hair.</p>
-</div>
-
-<div class="review-card">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>Best service for haircut and beard.</p>
+<b>— Aadesh Bhandari</b>
 </div>
 
 </div>
@@ -312,8 +395,6 @@ Call Now
 </div>
 
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact" class="section contact">
 
@@ -348,57 +429,5 @@ style="border:0;">
 💬 WhatsApp
 </a>
 
-<!-- GOOGLE SHEET CMS -->
-
-<script>
-
-const sheetURL =
-"https://opensheet.elk.sh/1n_KW9vHQ5MIFeKse4fAs9mbchzapVXsYqmVK7lF4xqU/1";
-
-fetch(sheetURL)
-.then(res => res.json())
-.then(data => {
-
-const container =
-document.getElementById("services-container");
-
-let categories = {};
-
-data.forEach(item => {
-
-if(!categories[item.category]){
-categories[item.category] = [];
-}
-
-categories[item.category].push(item);
-
-});
-
-for(const category in categories){
-
-let card = document.createElement("div");
-card.className = "service-card";
-
-let title = `<h3>${category}</h3>`;
-
-let items = "";
-
-categories[category].forEach(service => {
-
-items += `<p>${service.name} — ₹${service.price}</p>`;
-
-});
-
-card.innerHTML = title + items;
-
-container.appendChild(card);
-
-}
-
-});
-
-</script>
-
 </body>
 </html>
-
