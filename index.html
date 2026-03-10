@@ -44,7 +44,6 @@ font-weight:bold;
 color:white;
 text-decoration:none;
 margin-left:25px;
-font-size:15px;
 }
 
 /* HERO */
@@ -63,7 +62,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
 }
 
 .hero h1{
@@ -77,11 +75,9 @@ color:#f5c542;
 font-size:18px;
 }
 
-/* CALL BUTTON */
-
 .callbtn{
 display:inline-block;
-padding:14px 30px;
+padding:14px 28px;
 background:#f5c542;
 color:black;
 font-weight:bold;
@@ -120,18 +116,34 @@ transition:0.3s;
 transform:translateY(-5px);
 }
 
-/* REVIEWS */
+/* REVIEW CAROUSEL */
 
-.reviews{
-display:grid;
-grid-template-columns:repeat(2,1fr);
+.carousel{
+overflow:hidden;
+width:100%;
+}
+
+.carousel-track{
+display:flex;
 gap:25px;
+transition:transform 0.5s ease;
 }
 
 .review-card{
+min-width:33%;
 background:#1c1c1c;
 padding:25px;
 border-radius:10px;
+text-align:left;
+}
+
+.review-card h3{
+margin-bottom:8px;
+}
+
+.stars{
+color:#f5c542;
+margin-bottom:10px;
 }
 
 /* CONTACT */
@@ -184,8 +196,8 @@ padding:20px;
 grid-template-columns:1fr;
 }
 
-.reviews{
-grid-template-columns:1fr;
+.review-card{
+min-width:100%;
 }
 
 .hero h1{
@@ -271,20 +283,46 @@ Call Now
 
 <h2>Customer Reviews</h2>
 
-<div class="reviews">
+<div class="carousel">
+
+<div class="carousel-track">
 
 <div class="review-card">
-<p>
-"Super service.. Burahan gave me a customised experience.
-Best haircut for my face shape."
-</p>
+<h3>Sunil Kulkarni</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Super service.. Burahan gave me a customised experience. Best haircut for my face shape.</p>
 </div>
 
 <div class="review-card">
-<p>
-"Easy appointments, welcoming staff and talented employees.
-Highly recommend this salon."
-</p>
+<h3>Aadesh Bhandari</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>The only salon I trust with my hair. Easy appointments, welcoming staff and talented employees.</p>
+</div>
+
+<div class="review-card">
+<h3>Subhan Usmin</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Best service for haircut and beard. Amazing experience today.</p>
+</div>
+
+<div class="review-card">
+<h3>Dinesh Siddha</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Best place for haircut and hair treatments. Friendly staff and professional artist.</p>
+</div>
+
+<div class="review-card">
+<h3>Saloni More</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Very good experience. Works very well with all services.</p>
+</div>
+
+<div class="review-card">
+<h3>Pankaj Panwar</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Awesome service with good price and quality. Keep it up.</p>
+</div>
+
 </div>
 
 </div>
@@ -331,11 +369,37 @@ style="border:0;">
 
 </footer>
 
-<!-- WHATSAPP BUTTON -->
+<!-- WHATSAPP -->
 
 <a href="https://wa.me/917048946935" class="whatsapp">
 💬 WhatsApp
 </a>
+
+<!-- REVIEW CAROUSEL SCRIPT -->
+
+<script>
+
+let track=document.querySelector(".carousel-track");
+let index=0;
+
+function slideReviews(){
+
+let cards=document.querySelectorAll(".review-card");
+let cardWidth=cards[0].offsetWidth+25;
+
+index++;
+
+if(index>cards.length-3){
+index=0;
+}
+
+track.style.transform="translateX(-"+(cardWidth*index)+"px)";
+
+}
+
+setInterval(slideReviews,4000);
+
+</script>
 
 </body>
 
