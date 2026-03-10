@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A R Unisex Salon</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:black;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.navlinks a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1920&auto=format&fit=crop");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.rating{
+margin-bottom:20px;
+color:#f5c542;
+}
+
+.hero button{
+padding:12px 25px;
+border:none;
+background:#f5c542;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* SECTIONS */
+
+.section{
+padding:80px 60px;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:40px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.service-card{
+background:#1c1c1c;
+padding:30px;
+border-radius:10px;
+}
+
+/* REVIEWS */
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.review-card{
+background:#1c1c1c;
+padding:25px;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact p{
+margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+nav{
+padding:20px;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+.reviews{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">A R Unisex Salon</div>
+
+<div class="navlinks">
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>A R Unisex Salon</h1>
+
+<div class="rating">
+⭐ 4.9 Rating (31 Reviews)
+</div>
+
+<button onclick="window.open('tel:07048946935')">
+Call Now
+</button>
+
+</div>
+
+</section>
+
+<section id="services" class="section">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="service-card">
+<h3>Haircut</h3>
+<p>Modern styles and professional cuts.</p>
+</div>
+
+<div class="service-card">
+<h3>Beard Grooming</h3>
+<p>Clean shaping and beard styling.</p>
+</div>
+
+<div class="service-card">
+<h3>Hair Treatments</h3>
+<p>Hair spa and scalp care services.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Customer Reviews</h2>
+
+<div class="reviews">
+
+<div class="review-card">
+<p>
+"Super service.. Burahan gave me a customised experience. 
+Best haircut for my face shape."
+</p>
+</div>
+
+<div class="review-card">
+<p>
+"Easy appointments, welcoming staff and talented employees. 
+Highly recommend this salon."
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="section contact">
+
+<h2>Visit Us</h2>
+
+<p>
+📍 A/4, Panama Park Society,  
+Nimbalkar Nagar, Lohegaon, Pune 411047
+</p>
+
+<p>
+📞 070489 46935
+</p>
+
+<p>
+🕒 Open until 11 PM
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 A R Unisex Salon</p>
+
+</footer>
+
+</body>
+
+</html>
