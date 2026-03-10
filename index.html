@@ -2,10 +2,8 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>A R Unisex Salon</title>
 
 <style>
@@ -29,9 +27,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 60px;
-background:rgba(0,0,0,0.75);
-backdrop-filter:blur(6px);
-border-bottom:1px solid rgba(255,255,255,0.08);
+background:rgba(0,0,0,0.8);
+border-bottom:1px solid rgba(255,255,255,0.1);
 position:sticky;
 top:0;
 z-index:1000;
@@ -44,32 +41,24 @@ font-weight:bold;
 
 .navlinks{
 display:flex;
+gap:25px;
 }
 
 .navlinks a{
 color:white;
 text-decoration:none;
-margin-left:25px;
 font-size:15px;
-transition:0.3s;
-}
-
-.navlinks a:hover{
-color:#f5c542;
 }
 
 /* HERO */
 
 .hero{
 height:80vh;
-
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
 url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1920&auto=format&fit=crop");
-
 background-size:cover;
 background-position:center;
-
 display:flex;
 align-items:center;
 justify-content:center;
@@ -82,18 +71,16 @@ margin-bottom:10px;
 }
 
 .rating{
-margin-bottom:25px;
+margin-bottom:20px;
 color:#f5c542;
-font-size:18px;
 }
 
 .callbtn{
-display:inline-block;
 padding:14px 28px;
 background:#f5c542;
 color:black;
-font-weight:bold;
 text-decoration:none;
+font-weight:bold;
 border-radius:6px;
 }
 
@@ -123,11 +110,10 @@ background:#1c1c1c;
 padding:25px;
 border-radius:12px;
 text-align:left;
-min-height:280px;
 }
 
 .service-card h3{
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .service-card p{
@@ -140,46 +126,40 @@ font-size:14px;
 .carousel{
 overflow:hidden;
 width:100%;
-margin-top:40px;
 }
 
 .carousel-track{
 display:flex;
 gap:16px;
-animation:scrollReviews 35s linear infinite;
+width:max-content;
+animation:scroll 35s linear infinite;
 }
 
 .review-card{
 width:200px;
 min-width:200px;
-height:170px;
-
 background:#1c1c1c;
 padding:16px;
 border-radius:10px;
-
-display:flex;
-flex-direction:column;
+text-align:left;
 }
 
 .review-card p{
 font-size:13px;
-line-height:1.4;
+margin:8px 0;
 }
 
 .review-card b{
-margin-top:auto;
 font-size:12px;
 opacity:0.7;
 }
 
 .stars{
 color:#f5c542;
-margin-bottom:6px;
 font-size:14px;
 }
 
-@keyframes scrollReviews{
+@keyframes scroll{
 
 0%{
 transform:translateX(0);
@@ -197,12 +177,6 @@ transform:translateX(-50%);
 margin:10px 0;
 }
 
-.map{
-margin-top:30px;
-border-radius:10px;
-overflow:hidden;
-}
-
 /* FOOTER */
 
 footer{
@@ -212,7 +186,7 @@ padding:25px;
 margin-top:40px;
 }
 
-/* WHATSAPP */
+/* WHATSAPP BUTTON */
 
 .whatsapp{
 position:fixed;
@@ -222,35 +196,24 @@ background:#25D366;
 color:white;
 padding:14px 18px;
 border-radius:30px;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 z-index:9999;
 box-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* MOBILE NAVBAR FIX */
+/* MOBILE */
 
 @media(max-width:768px){
 
 nav{
 flex-direction:column;
-align-items:center;
 gap:10px;
 padding:16px;
 }
 
-.logo{
-font-size:20px;
-}
-
 .navlinks{
-display:flex;
 gap:18px;
-}
-
-.navlinks a{
-margin:0;
-font-size:14px;
 }
 
 .hero h1{
@@ -268,7 +231,6 @@ grid-template-columns:1fr;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -302,6 +264,8 @@ Call Now
 </div>
 
 </section>
+
+<!-- SERVICES -->
 
 <section id="services" class="section">
 
@@ -351,9 +315,9 @@ Call Now
 
 <div class="service-card">
 <h3>Hair Styling</h3>
-<p>Hair Blow Dry — ₹00</p>
-<p>Hair Straightening — ₹00</p>
-<p>Hair Curling — ₹00</p>
+<p>Blow Dry — ₹00</p>
+<p>Straightening — ₹00</p>
+<p>Curl Styling — ₹00</p>
 <p>Hair Iron — ₹00</p>
 <p>Party Styling — ₹00</p>
 <p>Volume Styling — ₹00</p>
@@ -361,8 +325,8 @@ Call Now
 
 <div class="service-card">
 <h3>Coloring</h3>
-<p>Hair Coloring — ₹00</p>
-<p>Beard Coloring — ₹00</p>
+<p>Hair Color — ₹00</p>
+<p>Beard Color — ₹00</p>
 <p>Highlights — ₹00</p>
 <p>Global Color — ₹00</p>
 <p>Root Touchup — ₹00</p>
@@ -370,3 +334,91 @@ Call Now
 </div>
 
 </div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="section">
+
+<h2>Customer Reviews</h2>
+
+<div class="carousel">
+
+<div class="carousel-track">
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Super service.. Best haircut for my face shape.</p>
+<b>— Sunil Kulkarni</b>
+</div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>The only salon I trust with my hair.</p>
+<b>— Aadesh Bhandari</b>
+</div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Best experience for haircut and beard.</p>
+<b>— Subhan Usmin</b>
+</div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Friendly staff and professional artists.</p>
+<b>— Dinesh Siddha</b>
+</div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Very good experience with all services.</p>
+<b>— Saloni More</b>
+</div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Good quality service at great prices.</p>
+<b>— Pankaj Panwar</b>
+</div>
+
+<!-- duplicates for infinite loop -->
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Super service.. Best haircut for my face shape.</p>
+<b>— Sunil Kulkarni</b>
+</div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>The only salon I trust with my hair.</p>
+<b>— Aadesh Bhandari</b>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section contact">
+
+<h2>Visit Us</h2>
+
+<p>📍 Panama Park Society, Lohegaon, Pune</p>
+<p>📞 070489 46935</p>
+
+</section>
+
+<footer>
+<p>© 2026 A R Unisex Salon</p>
+</footer>
+
+<a href="https://wa.me/917048946935" class="whatsapp">💬 WhatsApp</a>
+
+</body>
+</html>
